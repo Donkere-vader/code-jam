@@ -1,2 +1,2 @@
-# code-jam
-tech with tim discord server's code jam! generator theme!
+# Online identity generator
+This is a online identity generator. A project made for the August game jam of the Tech with Tim discord server.
