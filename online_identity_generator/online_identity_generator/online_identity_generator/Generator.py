@@ -1,4 +1,3 @@
-from .UserItem import UserItem
 from .Username import Username
 from .Password import Password
 from .Email import Email
@@ -22,35 +21,9 @@ class User:
         self.passwords = self.password_class.generate()
         self.email = self.email_class.generate()
         self.profile_picture = self.profile_picture_class.generate()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
+        
+        
 #Input Script
 if __name__ == '__main__':
     help_input = input("Type 'help' for more info on how our program works, otherwise click 'Enter': ")
