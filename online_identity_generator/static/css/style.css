@@ -2,8 +2,10 @@
 
 /* COLOR SCHEME */
 :root {
-    --primary-color: rgb(37, 32, 90);
-    --secondary-color: rgb(235, 192, 0);
+    --primary-color: #2E3440;
+    --container-color: #D8DEE9;
+    --green: #37CD2A;
+    --blue: #2187FF;
 }
 
 /* STYLE */
@@ -26,7 +28,31 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 20px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a img {
+    width: 42px;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
 }
 
 /* TEMPLATES */
