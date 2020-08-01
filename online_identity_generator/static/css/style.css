@@ -51,8 +51,10 @@ nav ul li a img {
     width: 42px;
 }
 
-header h1 {
+header a h1 {
     font-family: 'Pacifico', cursive;
+    text-decoration: none;
+    color: white;
 }
 
 /* TEMPLATES */
