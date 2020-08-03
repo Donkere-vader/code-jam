@@ -1,0 +1,27 @@
+#keywoards {
+    margin: 30px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form {
+    margin: 15px 0px;
+}
+
+.keywoard {
+    display: flex;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--blue);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.keywoard img {
+    width: 20px;
+}

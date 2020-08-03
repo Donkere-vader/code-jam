@@ -1,8 +1,22 @@
 /* STYLING SPECIFIC FOR HOME PAGE */
 
-main {
+main, main div {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+main div h1 {
+    font-size: 64px;
+    margin: 10px;
+}
+
+main div p {
+    font-size: 24px;
+}
+
+main div h1, main div p {
+    color: var(--primary-color);
 }

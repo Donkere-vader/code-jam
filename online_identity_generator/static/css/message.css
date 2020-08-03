@@ -1,0 +1,17 @@
+#message {
+    display: none;
+    padding: 8px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 20px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#message img {
+    cursor: pointer;
+}

@@ -1,0 +1,39 @@
+{% extends 'template.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="../../../static/css/form.css">
+<link rel="stylesheet" href="../../../static/css/generator.css">
+{% endblock style %}
+
+{% block script %}
+<script src="../../../../static/js/keywoards.js"></script>
+<script src="../../../../static/js/ajax.js"></script>
+{% endblock script %}
+
+{% block main %}
+<main>
+    <div class="flex_2_column">
+        <div class="container">
+            <h2>Keywoards</h2>
+
+            <div id="keywoards">
+                <p>add keywoards</p>
+            </div>
+
+            <div class="form">
+                <div class="flex_row">
+                    <input type="text" name="new_keywoard" id="new_keywoard_input" style="margin-right: 20px;">
+                    <button class="button" style="padding: 5px;" onclick="add_keywoard();"><img src="../../../static/images/icons/add.svg" alt=""></button>
+                </div>
+            </div>
+
+            <div class="flex_center">
+                <button class="button">Generate</button>
+            </div>
+        </div>
+        <div class="container">
+
+        </div>
+    </div>
+</main>
+{% endblock main %}

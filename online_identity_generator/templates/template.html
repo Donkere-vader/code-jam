@@ -6,15 +6,18 @@
 
     <!-- STYLE -->
     <link rel="stylesheet" href="../../../../static/css/style.css">
+    <link rel="stylesheet" href="../../../../static/css/message.css">
     {% block style %}
     {% endblock style %}
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- SCRIPTS -->
-    {% block scripts %}
-    {% endblock scripts %}
+    <script src="../../../../static/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {% block script %}
+    {% endblock script %}
 
     <title>Online identity generator</title>
 </head>
@@ -38,5 +41,10 @@
     {% block main %}
 
     {% endblock main %}
+
+    <div id="message">
+        <p id="message_msg"></p>
+        <img onclick="hide('error')" src="../../../../static/images/icons/cross.svg" alt="">
+    </div>
 </body>
 </html>
