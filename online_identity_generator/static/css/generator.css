@@ -25,3 +25,52 @@
 .keywoard img {
     width: 20px;
 }
+
+.choices p {
+    margin-top: 20px;
+}
+
+.choices_list {
+    margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.choice {
+    padding: 7px;
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.choice p {
+    margin: 0;
+}
+
+.profile_picture {
+    height: 95px;
+    width: 95px;
+    position: relative;
+}
+
+.profile_picture * {
+    border-radius: 50%;
+}
+
+.profile_picture .check {
+    background-color: var(--green);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    height: 24px;
+    width: 24px;
+}
+
+.profile_picture .check img {
+    width: 18px;
+}

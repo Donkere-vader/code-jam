@@ -1,3 +1,7 @@
+var handlers = {
+    "generator": generator_ajax_handler
+};
+
 function post_data(data) {
     var formData = new FormData();
 
@@ -12,10 +16,16 @@ function post_data(data) {
         processData: false,
         contentType: false //,
     }, function (data) {
-        if ('msg' in data) {
+        if ('msg' in data)
+        {
             show_message(data['msg'], 'green')
-        } else if ('error' in data) {
+        }
+        else if ('error' in data)
+        {
             show_message(data['error'], 'red')
+        }
+        if ('handler' in data) {
+            handlers[data['handler']](data) // Call the correct handler function
         }
     });
 }

@@ -6,7 +6,7 @@
 {% endblock style %}
 
 {% block script %}
-<script src="../../../../static/js/keywoards.js"></script>
+<script src="../../../../static/js/generator.js"></script>
 <script src="../../../../static/js/ajax.js"></script>
 {% endblock script %}
 
@@ -28,11 +28,11 @@
             </div>
 
             <div class="flex_center">
-                <button class="button">Generate</button>
+                <button class="button" onclick="generate();">Generate</button>
             </div>
         </div>
-        <div class="container">
-
+        <div id="choices" class="container choices">
+            {% include 'blocks/choices.html' %}
         </div>
     </div>
 </main>
