@@ -34,25 +34,19 @@ if __name__ == '__main__':
         
         ''')
 
-    include_words = input('*What words do you want to be included in your username?: ')
+    include_words = input('*What word do you want to be included in your username?: ')
     topic = input('For what are you going to use this username for (gaming, social-media, business, casual)?: ')
     spec_char = input('Do you want any special characters included in your name( "-", "_", ".")?: ')
     x = Username(spec_char,include_words, topic)
 
     print(f'This was the topic you chose: "{x.topic}" ')
     print(f'This was the word we included in your username: "{x.include_words}" ')
+
+    #Display-Name Script
+    print(f'These are the names we generated for you =): {x.generate_name()}')
+
+    #UserName Script
     print(f'These are the usernames we generated for you =): {x.generate_username()}')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    #Email Script
+    print(f'This is the email we generated for you =): {x.generate_email()}')
