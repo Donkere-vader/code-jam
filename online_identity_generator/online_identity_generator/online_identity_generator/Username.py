@@ -1,6 +1,7 @@
  # imports should be at the top of the file
 from random import choice, randint
 from string import ascii_letters
+from .UserItem import UserItem
 
 class Username(UserItem):
 
