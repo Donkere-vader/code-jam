@@ -90,3 +90,6 @@ def output():
     passwords = ["12321", "f*($"]
 
     return render_template('output.html', online_name=online_name, username=username, email=email, passwords=passwords)
+
+if __name__ == "__main__":
+    app.run(debug=True)
