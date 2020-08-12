@@ -1,0 +1,35 @@
+{% extends 'template.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="../../../static/css/output.css">
+{% endblock style %}
+
+{% block main %}
+<main>
+    <div class="container">
+        <h2>Output</h2>
+        <div class="flex_2_column">
+            <div class="column">
+                <div class="profile_picture">
+
+                </div>
+            </div>
+            <div class="column">
+                <p>Online name</p>
+                <p><b>{{ online_name }}</b></p>
+
+                <p>Username</p>
+                <p><b>{{ username }}</b></p>
+
+                <p>Email</p>
+                <p><b>{{ email }}</b></p>
+
+                <p>Passwords</p>
+                {% for p in passwords %}
+                <p><b>{{ p }}</b></p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock main %}

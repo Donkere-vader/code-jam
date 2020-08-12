@@ -132,6 +132,7 @@ function generator_ajax_handler(data) {
         $("#username").html(username_tags);
     }
     else if ('email' in data) {
+        var email = data['email']
         $("#email").html(`<b>${data['email']}</b>`)
     }
 
