@@ -1,7 +1,12 @@
  # imports should be at the top of the file
 from random import choice, randint
 from string import ascii_letters
-from .UserItem import UserItem
+try:
+    # Assume we're a sub-module in a package.
+    from .UserItem import UserItem
+except ImportError:
+    # Apparently no higher-level package has been imported, fall back to a local import.
+    import UserItem
 
 class Username(UserItem):
 
