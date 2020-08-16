@@ -138,7 +138,7 @@ function generator_ajax_handler(data) {
     else if ('email' in data) {
         var email = data['email'];
         $("#email").html(`<b>${data['email']}</b>`);
-        $("#hidden_email_input").val*(data['email']);
+        $("#hidden_email_input").val(data['email']);
     }
 
 
