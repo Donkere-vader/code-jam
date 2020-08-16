@@ -58,7 +58,7 @@ def ajax():
         for char in online_name:
             char_code = ord(char)
             if not ((char_code > 47 and char_code < 58) or (char_code > 63 and char_code < 91) or (char_code > 96 and char_code < 123) or char_code == 95 or char_code == 32):
-                return jsonify({"error": f"Get out of the fucking code u bitch {char_code}")
+                return jsonify({"error": f"Get out of the fucking code u bitch {char_code}"})
         
         # Place holder, this is where the code would contact the module for the acctual generating
         usernames = ['WhiteSpaghetti', 'white_spaghet']
