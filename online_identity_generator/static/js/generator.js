@@ -75,6 +75,8 @@ function select_choice(id) {
         selected_online_name = choice_element;
         online_name = selected_online_name.children().html()
 
+        $("#hidden_name_input").val(online_name)
+
         post_data({
             "action": "online_name",
             "online_name": online_name,
@@ -90,6 +92,8 @@ function select_choice(id) {
 
         username = selected_username.children().html();
 
+        $("#hidden_username_input").val(username)
+
         post_data({
             "action": "username",
             "username": username,
@@ -97,7 +101,7 @@ function select_choice(id) {
     }
     choice_element.css('background-color', 'var(--green)');
     choice_element.css('color', 'white');
-    choice_element.css('border', 'none')
+    choice_element.css('border', 'none');
 }
 
 function generate() {
@@ -113,7 +117,7 @@ function generator_ajax_handler(data) {
 
     if ('onlinenames' in data)
     {
-        var onlinename_tags = ""
+        var onlinename_tags = "";
 
         data['onlinenames'].forEach(function (name) {
             onlinename_tags += `<div class="choice" id="online_name_choice_${name.replace(' ', '_')}" onclick="select_choice('online_name_choice_${name.replace(' ', '_')}');"><p>${name}</p></div>`;
@@ -123,7 +127,7 @@ function generator_ajax_handler(data) {
     }
     else if ('usernames' in data)
     {
-        var username_tags = ""
+        var username_tags = "";
 
         data['usernames'].forEach(function (username) {
             username_tags += `<div class="choice" id="username_choice_${username}" onclick="select_choice('username_choice_${username}');"><p>${username}</p></div>`;
@@ -132,8 +136,9 @@ function generator_ajax_handler(data) {
         $("#username").html(username_tags);
     }
     else if ('email' in data) {
-        var email = data['email']
-        $("#email").html(`<b>${data['email']}</b>`)
+        var email = data['email'];
+        $("#email").html(`<b>${data['email']}</b>`);
+        $("#hidden_email_input").val*(data['email']);
     }
 
 

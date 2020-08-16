@@ -27,6 +27,15 @@ def ajax():
         # retrieve keywoards
         keywoards = request.form['keywoards'].split(',')
 
+        try:
+            keywoards.remove('')
+        except ValueError:
+                pass
+
+        print(keywoards, len(keywoards))
+        if len(keywoards) == 0:
+            return jsonify({"error": "Please provide at least one keywoard"})
+
         # check keywoards for special characters (if so return error)
         for keyw in keywoards:
             for char in keyw:
@@ -81,10 +90,12 @@ def ajax():
 
 @app.route('/output', methods=["POST"])
 def output():
-    # return the output page
-    online_name = request.form['online_name']
+    """ Shows beautifull output for the user """
+
+    online_name = request.form['name']
     username = request.form['username']
     email = request.form['email']
+
 
     # Place holder, this is where the code would contact the module for the acctual generating
     passwords = ["12321", "f*($"]

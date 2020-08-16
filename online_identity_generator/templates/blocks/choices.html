@@ -15,3 +15,12 @@
 <div class="choices_list">
     {% include 'blocks/profile_picture.html' %}
 </div>
+
+<form method="POST" action="../output">
+    <input id="hidden_name_input" type="hidden" name="name">
+    <input id="hidden_username_input" type="hidden" name="username">
+    <input id="hidden_email_input" type="hidden" name="email">
+    <input id="hidden_profile_picture_input" type="hidden" name="profile_picture">
+
+    <input type="submit" value="Confirm" class="button">
+</form>
