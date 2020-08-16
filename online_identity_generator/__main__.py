@@ -103,4 +103,4 @@ def output():
     return render_template('output.html', online_name=online_name, username=username, email=email, passwords=passwords)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=6969)
