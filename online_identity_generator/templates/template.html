@@ -16,6 +16,7 @@
     <!-- SCRIPTS -->
     <script src="../../../../static/js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../../../static/js/menu.js"></script>
     {% block script %}
     {% endblock script %}
 
@@ -26,7 +27,18 @@
         <a href="../../../">
             <h1>Online identity generator</h1>
         </a>
-        <nav>
+        <nav class="desktop">
+            <ul>
+                <li><a href="../../../">Home</a></li>
+                <li><a href="../../../generator">Generator</a></li>
+                <li><a href="../../../about">About</a></li>
+                <li><a href="https://github.com/one-wq/code-jam">
+                    <img src="../../../../static/images/github_logo.png" alt="Link to the github repo">    
+                </a></li>
+            </ul>
+        </nav>
+        <img class="mobile" src="../../static/images/icons/menu.svg" alt="" onclick="toggle('mobile_nav');">
+        <nav id="mobile_nav">
             <ul>
                 <li><a href="../../../">Home</a></li>
                 <li><a href="../../../generator">Generator</a></li>

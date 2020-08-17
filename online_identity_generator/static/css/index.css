@@ -11,6 +11,7 @@ main, main div {
 main div h1 {
     font-size: 64px;
     margin: 10px;
+    text-align: center;
 }
 
 main div p {

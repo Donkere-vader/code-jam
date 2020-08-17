@@ -59,6 +59,28 @@ header a h1 {
     color: white;
 }
 
+#mobile_nav {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 75px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#mobile_nav ul {
+    display: inline-block;
+    width: 200px;
+}
+
+#mobile_nav ul li a, #mobile_nav ul li {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
 /* MAIN */
 main {
     margin: 0px 300px;
@@ -100,7 +122,45 @@ main .button {
     padding: 30px;
     border-radius: 20px;
     background-color: var(--container-color);
-    width: 100%;
     margin: 20px 10px;
+    width: 100%;
     height: min-content;
+}
+
+/* Responsive */
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    main {
+        margin: 0px 50px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: inherit;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        margin: 0px 20px;
+    }
+    .flex_2_column {
+        flex-direction: column;
+    }
+    .flex_2_column .container {
+        width: initial;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    main {
+        margin: 0px 10px;
+    }
 }
