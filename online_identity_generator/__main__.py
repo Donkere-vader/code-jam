@@ -23,21 +23,21 @@ def ajax():
     # its not super clean code, but it works
     action = request.form['action']
 
-    if action == 'keywoards':
-        # retrieve keywoards
-        keywoards = request.form['keywoards'].split(',')
+    if action == 'keywords':
+        # retrieve keywords
+        keywords = request.form['keywords'].split(',')
 
         try:
-            keywoards.remove('')
+            keywords.remove('')
         except ValueError:
                 pass
 
-        print(keywoards, len(keywoards))
-        if len(keywoards) == 0:
-            return jsonify({"error": "Please provide at least one keywoard"})
+        print(keywords, len(keywords))
+        if len(keywords) == 0:
+            return jsonify({"error": "Please provide at least one keyword"})
 
-        # check keywoards for special characters (if so return error)
-        for keyw in keywoards:
+        # check keywords for special characters (if so return error)
+        for keyw in keywords:
             for char in keyw:
                 char_code = ord(char)
                 if not ((char_code > 47 and char_code < 58) or (char_code > 63 and char_code < 91) or (char_code > 96 and char_code < 123)):

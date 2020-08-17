@@ -1,15 +1,15 @@
-var keywoards = [];
+var keywords = [];
 
 function construct_tag(value) {
-    return `<div onclick="remove_keywoard('${value}');" class="keywoard" id="keywoard_${value}"><p>${value}</p><img src="../../../static/images/icons/cross.svg"></div>`;
+    return `<div onclick="remove_keyword('${value}');" class="keyword" id="keyword_${value}"><p>${value}</p><img src="../../../static/images/icons/cross.svg"></div>`;
 }
 
-function add_keywoard() {
-    var element = $("#new_keywoard_input");
+function add_keyword() {
+    var element = $("#new_keyword_input");
     var value = element.val();
 
     // If there is no input stop doing shit
-    if (value == "" || keywoards.includes(value)) {
+    if (value == "" || keywords.includes(value)) {
         return;
     }
 
@@ -22,42 +22,42 @@ function add_keywoard() {
         }
     }
 
-    var first_keywoard = false;
-    if (keywoards.length == 0) {
-        first_keywoard = true;
+    var first_keyword = false;
+    if (keywords.length == 0) {
+        first_keyword = true;
     }
 
-    keywoards.push(value);
+    keywords.push(value);
 
-    var keywoards_element = $("#keywoards");
+    var keywords_element = $("#keywords");
 
-    var keywoard_tag_html = construct_tag(value);
+    var keyword_tag_html = construct_tag(value);
 
 
-    if (first_keywoard) {
-        keywoards_element.html(keywoard_tag_html);
+    if (first_keyword) {
+        keywords_element.html(keyword_tag_html);
     } else {
-        keywoards_element.append(keywoard_tag_html);
+        keywords_element.append(keyword_tag_html);
     }
 
     element.val("");
 }
 
-function remove_keywoard(keywoard) {
-    var index = keywoards.indexOf(keywoard);
+function remove_keyword(keyword) {
+    var index = keywords.indexOf(keyword);
 
-    keywoards.splice(index, 1);
+    keywords.splice(index, 1);
 
-    var keywoards_element = $("#keywoards");
+    var keywords_element = $("#keywords");
 
-    console.log(keywoards_element.html());
-    console.log(construct_tag(keywoard));
+    console.log(keywords_element.html());
+    console.log(construct_tag(keyword));
 
-    console.log(keywoards_element.html().includes(construct_tag(keywoard)));
+    console.log(keywords_element.html().includes(construct_tag(keyword)));
 
-    keywoards_element.html(keywoards_element.html().replace(construct_tag(keywoard), ''));
+    keywords_element.html(keywords_element.html().replace(construct_tag(keyword), ''));
 
-    console.log(keywoards);
+    console.log(keywords);
 }
 
 var selected_online_name = null;
@@ -106,8 +106,8 @@ function select_choice(id) {
 
 function generate() {
     post_data({
-        "action": "keywoards",
-        "keywoards": keywoards
+        "action": "keywords",
+        "keywords": keywords
     });
 }
 
