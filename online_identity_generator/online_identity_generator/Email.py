@@ -17,3 +17,5 @@ class Email(UserItem):
             print(f"checking {self.email}")
             if validate_email(self.email, verify=True) is None:
                 return self.email
+
+        return "No unused email address could be found"

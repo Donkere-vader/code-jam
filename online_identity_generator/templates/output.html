@@ -18,22 +18,22 @@
                 <div style="height: 10px;"></div>
 
                 <p>Online name</p>
-                <p><b>{{ online_name }}</b></p>
+                <p><b>{{ current_user.name.get() }}</b></p>
 
                 <div style="height: 10px;"></div>
 
                 <p>Username</p>
-                <p><b>{{ username }}</b></p>
+                <p><b>{{ current_user.username.get() }}</b></p>
 
                 <div style="height: 10px;"></div>
 
                 <p>Email</p>
-                <p><b>{{ email }}</b></p>
+                <p><b>{{ current_user.email.email }}</b></p>
 
                 <div style="height: 10px;"></div>
 
                 <p>Passwords</p>
-                {% for p in passwords %}
+                {% for p in current_user.passwords.passwords %}
                 <p><b>{{ p }}</b></p>
                 {% endfor %}
             </div>

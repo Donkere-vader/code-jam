@@ -94,6 +94,8 @@ function select_choice(id) {
 
         $("#hidden_username_input").val(username)
 
+        show_message('Generating an email takes some time. please be patient...', 'green');
+
         post_data({
             "action": "username",
             "username": username,

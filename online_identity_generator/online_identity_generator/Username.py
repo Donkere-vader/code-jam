@@ -7,7 +7,9 @@ class Username(UserItem):
         """ The function you call to generate the usernames """
         self.usernames = []
 
-        for keywords in permutations(self.parent.keywords, 3):
+        print(f"Keywords: {self.parent.keywords}")
+
+        for keywords in permutations(self.parent.keywords, min(len(self.parent.keywords), 3)):
             self.usernames += self._generate(keywords)
 
         return self.usernames
