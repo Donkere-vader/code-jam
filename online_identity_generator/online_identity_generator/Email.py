@@ -5,7 +5,11 @@ class Email(UserItem):
     def generate(self):
         username = self.parent.username.get()
         usernames = self.parent.username.usernames
-        usernames.remove(username)
+
+        try:
+            usernames.remove(username)
+        except ValueError:
+            pass
 
         self.email = f"{username}@gmail.com"  # w'll only bother for gmail for now
         print(f"checking {self.email}")
