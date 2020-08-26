@@ -75,8 +75,6 @@ function select_choice(id) {
         selected_online_name = choice_element;
         online_name = selected_online_name.children().html()
 
-        $("#hidden_name_input").val(online_name)
-
         post_data({
             "action": "online_name",
             "online_name": online_name,
@@ -91,8 +89,6 @@ function select_choice(id) {
         selected_username = choice_element;
 
         username = selected_username.children().html();
-
-        $("#hidden_username_input").val(username)
 
         show_message('Generating an email takes some time. please be patient...', 'green');
 
@@ -140,7 +136,6 @@ function generator_ajax_handler(data) {
     else if ('email' in data) {
         var email = data['email'];
         $("#email").html(`<b>${data['email']}</b>`);
-        $("#hidden_email_input").val(data['email']);
     }
 
 
