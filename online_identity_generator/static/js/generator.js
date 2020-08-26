@@ -103,6 +103,9 @@ function select_choice(id) {
 }
 
 function generate() {
+    $("#online_names").html("");
+    $("#username").html("");
+    $("#email").html("");
     post_data({
         "action": "keywords",
         "keywords": keywords
@@ -136,6 +139,7 @@ function generator_ajax_handler(data) {
     else if ('email' in data) {
         var email = data['email'];
         $("#email").html(`<b>${data['email']}</b>`);
+        show_message("Email generated.", "green");
     }
 
 
