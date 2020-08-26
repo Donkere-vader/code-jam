@@ -1,0 +1,16 @@
+{% extends 'template.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="../../../../static/css/index.css">
+{% endblock style %}
+
+{% block main %}
+<main>
+    <div>
+        <h2>
+            {{ e.code }}
+        </h2>
+        <p style="text-align: center;">{{ e }}</p>
+    </div>
+</main>
+{% endblock main %}

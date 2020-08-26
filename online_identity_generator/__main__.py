@@ -17,6 +17,13 @@ def load_user(id):
 
 app.secret_key = os.urandom(24)
 
+# ERRORS
+def handle_bad_request(e):
+    return render_template('error.html', e=e)
+
+app.register_error_handler(500, handle_bad_request)
+app.register_error_handler(404, handle_bad_request)
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -92,8 +99,7 @@ def ajax():
 
         return jsonify({
             "handler": "generator",
-            "usernames": usernames,
-            "msg": f"Usernames: {usernames}"
+            "usernames": usernames
         })
 
     if action == 'username':
